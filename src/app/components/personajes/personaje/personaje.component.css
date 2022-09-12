@@ -1,0 +1,78 @@
+.content .workBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.content .workBx .imgBx {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  transition: 500ms ease-in-out;
+}
+
+.content .workBx:hover .imgBx {
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.content .workBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content .workBx .textBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: 500ms ease-in-out;
+}
+
+.content .workBx:hover .textBx {
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.content .workBx .textBx .text {
+  top: 0;
+  left: 0;
+  width: max-content;
+  height: max-content;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  transition: 500ms ease-in-out;
+  text-align: center;
+}
+
+.content .workBx .textBx .text h3,
+.content .workBx .textBx .text h2 {
+  color: #000;
+  font-size: 1em;
+  transition: 500ms;
+}
+
+.content .workBx .textBx .text h2 {
+  margin: 15px;
+  font-weight: bold;
+}
+
+.content .workBx .textBx .text:hover h3,
+.content .workBx .textBx .text:hover h2 {
+  color: #3fff00;
+  font-size: 1.1em;
+}

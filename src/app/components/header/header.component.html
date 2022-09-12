@@ -1,0 +1,16 @@
+<header>
+  <a [routerLink]="['/inicio']" class="logo">Rick And Morty</a>
+  <div class="toggle" onclick="toogleMenu()"></div>
+  <ul class="menu">
+    <li><a onclick="toogleMenu()" [routerLink]="['/inicio']">Inicio</a></li>
+    <li>
+      <a onclick="toogleMenu()" [routerLink]="['/listaPersonajes']"
+        >Personajes</a
+      >
+    </li>
+    <li>
+      <a onclick="toogleMenu()" [routerLink]="['/episodios']">Episodios</a>
+    </li>
+    <li><a onclick="toogleMenu()" [routerLink]="['/nosotros']">Nosotros</a></li>
+  </ul>
+</header>
