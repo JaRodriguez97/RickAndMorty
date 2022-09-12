@@ -1,0 +1,19 @@
+.nosotros .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.nosotros .content .textBox {
+  width: 40%;
+  min-width: 40%;
+}
+
+.nosotros .content .imgBx {
+  margin-left: 40px;
+}
+
+.nosotros .content .imgBx img {
+  max-width: 100%;
+}

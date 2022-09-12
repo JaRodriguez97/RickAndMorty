@@ -1,0 +1,13 @@
+<section>
+  <div class="title">
+    <h2>Episodios Emitidos:</h2>
+  </div>
+  <div class="box">
+    <ul>
+      <li *ngFor="let episodio of episodios$ | async; let i = index">
+        <span>{{ i + 1 }}</span>
+        {{ episodio.episode }} - {{ episodio.name }}
+      </li>
+    </ul>
+  </div>
+</section>
