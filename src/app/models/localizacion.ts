@@ -4,6 +4,7 @@ export interface Localizacion {
   id: string;
   name: string;
   dimension: string;
-  residents: Personaje;
+  type: string;
+  residents: Personaje[];
   created: string;
 }

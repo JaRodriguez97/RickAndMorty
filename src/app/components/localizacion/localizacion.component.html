@@ -1,4 +1,20 @@
-<section>
-  <div *ngFor="let loc of localizacion$ | async">{{ loc.dimension
-  }}</div>
+<section *ngFor="let loc of localizacion$ | async">
+  <div class="title">
+    <h2>
+      Hay {{ loc.residents.length }} Residentes de la dimensión:
+      {{ loc.dimension }}:
+    </h2>
+  </div>
+
+  <label class="content">
+    La locación es de tipo: <strong> {{ loc.type }}</strong>
+  </label>
+  <p>(Fotos de los residentes)</p>
+  <div class="box">
+    <ng-container *ngFor="let residente of loc.residents; let i = index">
+      <span style="--i:{{ i + 1 }}">
+        <img [src]="residente.image" alt="residente.name" />
+      </span>
+    </ng-container>
+  </div>
 </section>
