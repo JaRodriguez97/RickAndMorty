@@ -1,6 +1,9 @@
 <section>
   <div class="title">
-    <h2>Episodios Emitidos:</h2>
+    <h2 *ngIf="paramId.toString() == 'all'">Todos los Episodios Emitidos:</h2>
+    <h2 *ngIf="paramId.toString() != 'all'">
+      Episodios del Personaje Seleccionado:
+    </h2>
   </div>
   <div class="box">
     <ul>

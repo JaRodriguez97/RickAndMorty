@@ -7,8 +7,10 @@ export interface ResData<T> {
 
 export interface ResCharacter {
   characters: ResData<Personaje[]>;
+  charactersByIds?: ResData<Personaje>;
 }
 
 export interface ResEpisode {
   episodes: ResData<Episodio[]>;
+  episodesByIds?: ResData<Episodio>;
 }

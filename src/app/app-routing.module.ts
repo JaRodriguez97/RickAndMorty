@@ -9,31 +9,31 @@ const routes: Routes = [
       import('./components/inicio/inicio.module').then((m) => m.InicioModule),
   },
   {
-    path: 'episodios',
+    path: 'listaPersonajes',
+    loadChildren: () =>
+      import('./components/personajes/lista-personajes.module').then(
+        (m) => m.ListaPersonajesModule
+      ),
+  },
+  {
+    path: 'episodios/:id',
     loadChildren: () =>
       import('./components/episodios/episodios.module').then(
         (m) => m.EpisodiosModule
       ),
   },
   {
-    path: 'listaPersonajes',
-    loadChildren: () =>
-      import(
-        './components/personajes/lista-personajes/lista-personajes.module'
-      ).then((m) => m.ListaPersonajesModule),
-  },
-  {
-    path: 'detallesPersonaje/:id',
-    loadChildren: () =>
-      import(
-        './components/personajes/detalles-personaje/detalles-personaje.module'
-      ).then((m) => m.DetallesPersonajeModule),
-  },
-  {
     path: 'nosotros',
     loadChildren: () =>
-      import('./components/nosotros/nosotros/nosotros.module').then(
+      import('./components/nosotros/nosotros.module').then(
         (m) => m.NosotrosModule
+      ),
+  },
+  {
+    path: 'localizacion/:id',
+    loadChildren: () =>
+      import('./components/localizacion/localizacion.module').then(
+        (m) => m.LocalizacionModule
       ),
   },
 ];
