@@ -10,13 +10,10 @@
 }
 
 .nosotros .content .textBox {
-  width: 40%;
-  min-width: 40%;
+  width: 50%;
+  min-width: 50%;
 }
 
-.nosotros .content .textBox h3 {
-  margin: 25px;
-}
 .nosotros .content .imgBx {
   margin-left: 40px;
 }
@@ -24,5 +21,5 @@
 .nosotros .content .imgBx img {
   min-width: 60%;
   max-width: 100%;
-  height: 450px;
+  height: 350px;
 }

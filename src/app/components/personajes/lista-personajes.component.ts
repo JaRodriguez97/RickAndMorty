@@ -29,8 +29,8 @@ export class ListaPersonajesComponent implements OnInit {
     let spinnerOn = this.spinnerService.spinnerObservable.value.show;
 
     if (
-      (window.pageYOffset > 1300 * this.pageCount ||
-        this.document.documentElement.scrollTop > 1300 * this.pageCount) &&
+      (window.pageYOffset > 1200 * this.pageCount ||
+        this.document.documentElement.scrollTop > 1200 * this.pageCount) &&
       !spinnerOn
     ) {
       this.pageCount++;
@@ -56,7 +56,7 @@ export class ListaPersonajesComponent implements OnInit {
       confirmButtonColor: '#007bff',
       title: `#${personaje.id} - ${personaje.name}`,
       imageUrl: personaje.image,
-      imageHeight: 200,
+      imageHeight: 150,
       html: `<bold>Género:</bold> ${personaje.gender}<br>
         <bold>Estado:</bold> ${personaje.status}<br>
         <bold>Especie:</bold> ${personaje.species} <br>

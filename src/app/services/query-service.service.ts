@@ -281,6 +281,7 @@ export class QueryServiceService {
             residents {
               name
               id
+              image
             }
           }
         }
@@ -294,8 +295,8 @@ export class QueryServiceService {
             (res) => {
               let { data } = res,
                 { charactersByIds } = data;
-              console.log(charactersByIds[0].location);
-              this.localizacionSubj.next(charactersByIds[0].location);
+              console.log(charactersByIds[0].location.residents);
+              this.localizacionSubj.next([charactersByIds[0].location]);
             },
             (err) => console.error(err),
             () => this.spinnerService.hide()
