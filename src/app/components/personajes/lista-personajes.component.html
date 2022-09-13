@@ -1,22 +1,26 @@
 <section>
   <div class="title">
-    <h2>Personajes Favoritos:</h2>
-    <p>Aquí podrás encontrar los personajes que marcaste como favoritos.</p>
-    <h6>No puedes desmarcar desde aquí**</h6>
+    <h2>Personajes de la serie:</h2>
+    <p>
+      Aquí podrás ver detalles de los personajes, agregar o quitar de favoritos
+      para completar tu colección.
+    </p>
   </div>
   <div class="project adjust">
     <div class="content">
       <div
         [class]="{ workBx: true, selecFav: personaje.isFavorite }"
-        *ngFor="let personaje of personajesFavoritos | async"
+        *ngFor="let personaje of personajes$ | async"
       >
         <div class="imgBx">
           <img [src]="personaje.image" [alt]="personaje.image" />
         </div>
         <div class="textBx">
           <ul class="action">
-            <li>
-              <i class="fa fa-star"></i>
+            <li (click)="favoriteToggle(personaje)">
+              <i class="fa fa-star-o" *ngIf="!personaje.isFavorite"></i>
+              <i class="fa fa-star" *ngIf="personaje.isFavorite"></i>
+              <span>Agregar a favoritos</span>
             </li>
           </ul>
           <div class="text" (click)="detallesPersonaje(personaje)">

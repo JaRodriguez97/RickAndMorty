@@ -45,7 +45,7 @@ section {
   transition: 500ms;
 }
 
-.title:hover h2::before {
+.title h2:hover::before {
   bottom: -5px;
   width: 40%;
   background: #3fff00;
@@ -56,6 +56,6 @@ section {
   min-height: 100vh;
   width: 100%;
   padding: 0 40px;
-  padding-top: 80px;
+  padding-top: 50px;
   display: inline-block;
 }

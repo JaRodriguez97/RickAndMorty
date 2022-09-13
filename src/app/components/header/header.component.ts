@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,25 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  header: HTMLElement | null | undefined;
-  menuToggle: Element | null | undefined;
-  menu: Element | null | undefined;
+  header!: HTMLElement;
+  menuToggle!: Element;
+  menu!: Element;
 
-  constructor() {
-    window.addEventListener('scroll', () => {
-      this.header = document.querySelector('header')!;
-      this.header.classList.toggle('sticky', window.scrollY > 0);
-    });
+  constructor() {}
+
+  // agregamos clase sticky al header al hacer scroll
+  @HostListener('window:scroll')
+  scrolling(): void {
+    this.header = document.querySelector('header')!;
+    this.header.classList.toggle('sticky', window.scrollY > 0);
   }
 
   ngOnInit(): void {}
 
+  // Menú toggle
   toogleMenu(): void {
     this.menuToggle = document.querySelector('.toggle')!;
     this.menu = document.querySelector('.menu')!;
     this.menuToggle.classList.toggle('active');
     this.menu.classList.toggle('active');
-    window.scrollY = 0;
-    console.log(window.scrollY);
   }
 }

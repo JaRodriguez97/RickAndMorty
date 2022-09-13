@@ -10,6 +10,7 @@ export class NosotrosComponent implements OnInit {
   constructor(private spinnerService: NgxSpinnerService) {}
 
   ngOnInit(): void {
+    // Oculta spinner al recargar página
     this.spinnerService.hide();
   }
 }
